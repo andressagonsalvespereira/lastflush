@@ -1,4 +1,4 @@
-import { supabase } from '@/supabase/client';  // Utiliza o alias '@' para importar o client
+import { supabase } from '../../src/supabase/client'; // caminho relativo
 
 export const asaasWebhookHandler = async (req, res) => {
   const { payment_id, status } = req.body;
