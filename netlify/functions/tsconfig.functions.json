@@ -8,7 +8,11 @@
     "strict": true,
     "noEmitOnError": true,
     "resolveJsonModule": true,
-    "types": ["@netlify/functions"]
+    "types": ["@netlify/functions"],
+    "baseUrl": "../..",  // Adicione isso
+    "paths": {
+      "@/*": ["src/*"]   // E isso
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist", "tests"]
