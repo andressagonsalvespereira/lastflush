@@ -3,8 +3,8 @@
 [build]
   command = "npm run build && cp -r src/supabase netlify/functions/dist/supabase"  # Compila e copia os tipos Supabase para funções
   publish = "dist"  # Diretório de saída do frontend
-  functions = "netlify/functions"  # Diretório onde estão suas funções serverless
-
+  functions = "netlify/functions"
+  
 [functions]
   directory = "netlify/functions"
 
