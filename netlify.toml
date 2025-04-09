@@ -1,10 +1,11 @@
 # netlify.toml
 
 [build]
-  command = "npm run build && cp -r src/supabase netlify/functions/dist/supabase"  # Compila e copia os tipos Supabase para funções
-  publish = "dist"  # Diretório de saída do frontend
+  command = "npm run build && [ -d src/supabase ] && cp -r src/supabase netlify/functions/dist/supabase || echo '📂 Pasta src/supabase não encontrada, pulando cópia...'"
+  publish = "dist"
   functions = "netlify/functions"
-  
+
+
 [functions]
   directory = "netlify/functions"
 
