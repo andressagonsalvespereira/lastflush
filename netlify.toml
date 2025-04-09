@@ -1,14 +1,14 @@
+# netlify.toml
+
 [build]
-  command = "npm run build && cp -r src/supabase netlify/functions/dist/supabase"
-  functions = "netlify/functions"
-  publish = "dist"
+  command = "npm run build && cp -r src/supabase netlify/functions/dist/supabase"  # Compila e copia os tipos Supabase para funções
+  publish = "dist"  # Diretório de saída do frontend
+  functions = "netlify/functions"  # Diretório onde estão suas funções serverless
 
 [functions]
-  directory = "netlify/functions"  # Localização das funções Netlify
+  directory = "netlify/functions"
 
 [[redirects]]
-  from = "/api/*"  # Redireciona qualquer requisição para o caminho /api/
-  to = "/.netlify/functions/:splat"  # Redireciona para a função Netlify
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
-
-
