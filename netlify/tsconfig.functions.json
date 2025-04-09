@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ES6",
     "module": "commonjs",
-    "lib": ["esnext", "dom"],
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "dist",
-    "rootDir": "."
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmitOnError": true
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "netlify/functions/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

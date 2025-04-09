@@ -1,4 +1,11 @@
+[build]
+  command = "npm run build"  # Comando para construir o projeto
+  publish = "dist"  # Pasta onde os arquivos de build serão publicados
+
+[functions]
+  directory = "netlify/functions"  # Localização das funções Netlify
+
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/api/*"  # Redireciona qualquer requisição para o caminho /api/
+  to = "/.netlify/functions/:splat"  # Redireciona para a função Netlify
   status = 200
