@@ -1,4 +1,4 @@
-import { supabase } from '../../src/supabase/client'; // caminho relativo
+import { supabase } from '../../src/integrations/supabase/client';  // Caminho correto baseado na localização do arquivo
 
 export const asaasWebhookHandler = async (req, res) => {
   const { payment_id, status } = req.body;
