@@ -9,6 +9,7 @@
     "build:dev": "npm run build:functions && vite build --mode development",
     "build:functions": "tsc --project netlify/functions/tsconfig.functions.json",
     "lint": "eslint .",
+    "git-commit-push": "git add . && git commit -m \"Corrige configuração do Netlify\" && git push origin master",
     "preview": "vite preview"
   },
   "dependencies": {
