@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"  # Comando para construir o projeto
-  publish = "dist"  # Pasta onde os arquivos de build serão publicados
+  command = "npm run build && cp -r src/supabase netlify/functions/dist/supabase"
+  functions = "netlify/functions"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"  # Localização das funções Netlify
@@ -9,3 +10,5 @@
   from = "/api/*"  # Redireciona qualquer requisição para o caminho /api/
   to = "/.netlify/functions/:splat"  # Redireciona para a função Netlify
   status = 200
+
+
